@@ -12,7 +12,7 @@
 		</noscript>
 	</head>
 
-	<body class="landing is-preload">
+	<body class="landing is-preload" onload="handleClientLoad()">
 
 		<!-- Page Wrapper -->
 		<div id="page-wrapper">
@@ -34,7 +34,6 @@
 				<div class="inner">
 					<h2>Start Web Perú</h2>
 					<p>Diseñando el futuro digital de los emprendedores</p>
-					<i class="icon brands fa-whatsapp"></i>
 				</div>
 				<a href="#one" class="more scrolly">Quienes somos</a>
 			</section>
@@ -249,9 +248,17 @@
 		<!-- Libs -->
 		<script src="swc/js/form.valid.js"></script>
 
+		<!-- Apis -->
+		<script src="https://apis.google.com/js/api.js"></script>
+
+		<script src="swc/cloud/auth.js"></script>
+		<script src="swc/cloud/sheet/form.js"></script>
+
 		<!-- Modules -->
 		<script type="module" src="swc/modules/mail.mjs"></script>
 		<script type="module" src="swc/modules/components.mjs"></script>
+
+
 
 	</body>
 

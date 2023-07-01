@@ -5,7 +5,7 @@
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
 */
 import { emailParams } from '../config.js';
-import { validMessage } from '../params/messages.js';
+import { validMessage, confirmMessage } from '../params/messages.js';
 import { emailWelcome } from '../params/mail.js';
 
 document.getElementById("send-button").addEventListener("click", function (event) {
@@ -29,14 +29,18 @@ document.getElementById("send-button").addEventListener("click", function (event
 		return;
 	}
 
-	Email.send({
-		SecureToken: emailParams.SecureToken,
-		To: email,
-		From: emailParams.From,
-		Subject: emailWelcome.Subject,
-		Body: emailWelcome.Body
-	}).then(
-		message => alert(message)
-	);
+	// Email.send({
+	// 	SecureToken: emailParams.SecureToken,
+	// 	To: email,
+	// 	From: emailParams.From,
+	// 	Subject: emailWelcome.Subject,
+	// 	Body: emailWelcome.Body
+	// }).then(function (message) {
+	// 	if (message === "OK") {
+	// 		alert(confirmMessage.mail);
+	// 	} else {
+	// 		message => alert(message)
+	// 	}
+	// });
 });
 
