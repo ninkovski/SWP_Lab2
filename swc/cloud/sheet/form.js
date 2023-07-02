@@ -18,8 +18,7 @@ document.getElementById("send-button").addEventListener("click", function (event
         "https://script.google.com/macros/s/AKfycbwJQ7ZU_9zDfXqhgoeKrgzFxnCrm7kuO8_MukY-MGIgLvVGvR33vMCXLXQri3YuGBQZFA/exec",
         {
             method: "POST",
-            body: formData,
-            mode: "no-cors"
+            body: formData 
         }
     )
         .then((res) => res.json())
