@@ -6,28 +6,29 @@
 
 document.getElementById("send-button").addEventListener("click", function (event) {
     event.preventDefault();
-    // Captura los valores del formulario
-    var nombre = document.getElementById('demo-name').value;
-    var celular = document.getElementById('demo-nro').value;
-    var correo = document.getElementById('demo-email').value;
 
-    // Crea el objeto de datos a enviar a Google Sheets
-    var datos = {
-        values: [[nombre, celular, correo]]
-    };
+    var formData = new FormData();
+    formData.append("Aplicacion", "Mi Aplicacion");
+    formData.append("Nombre", document.getElementById("demo-name").value);
+    formData.append("Telefono", document.getElementById("demo-nro").value);
+    formData.append("Correo", document.getElementById("demo-email").value);
+    formData.append("Mensaje", "Mi mensaje");
 
-    // Envía los datos a Google Sheets
-    gapi.client.sheets.spreadsheets.values.append({
-        spreadsheetId: '1bebHGEKX7FOn1BUWp0m07of42m0jvRzYa8xAQMUxprE',
-        range: 'Clientes_Form',
-        valueInputOption: 'RAW',
-        resource: datos
-    }).then(function (response) {
-        console.log('Registro guardado correctamente');
-        // Aquí puedes agregar cualquier otra lógica adicional después de guardar el registro
-        // Por ejemplo, mostrar un mensaje de éxito, limpiar el formulario, etc.
-    }, function (reason) {
-        console.error('Error al guardar el registro:', reason.result.error.message);
-    });
+    fetch(
+        "https://script.google.com/macros/s/AKfycbwJQ7ZU_9zDfXqhgoeKrgzFxnCrm7kuO8_MukY-MGIgLvVGvR33vMCXLXQri3YuGBQZFA/exec",
+        {
+            method: "POST",
+            body: formData,
+            mode: "no-cors"
+        }
+    )
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
 });
 
