@@ -15,7 +15,7 @@ document.getElementById("send-button").addEventListener("click", function (event
     formData.append("Mensaje", "Mi mensaje");
 
     fetch(
-        "https://script.google.com/macros/s/AKfycbxb1WV_5SmdxxLn7ikZAeZkp6Xg_CaY0OGG_wraiYn8HA1jhZqDQ6hg1qgaVCTiFQFSYw/exec",
+        "https://script.google.com/macros/s/AKfycbxOzV3BDwkmnG7nQojNG59eULLbhHIIYIFRLEojrnGQlMxDgTdw3H45CvWNS8l6yNRfUg/exec",
         {
             method: "POST",
             body: formData 
