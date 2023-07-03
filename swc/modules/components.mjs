@@ -1,5 +1,5 @@
 /*
-	Variables de entorno  
+	Componentes Generales  
 	StartWebPerú | @ninkovski
 */
 import { footerContent, headerContent } from '../params/components.js';
