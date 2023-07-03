@@ -3,7 +3,7 @@
     StartWebPerú | @ninkovski
     Guardar registro de formulario 
 */
-import { appParams } from '../config.js';
+import { appParams } from '../../config.js';
 
 export function saveToGoogleSheets() {
 
