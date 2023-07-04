@@ -4,7 +4,10 @@
 */
 
 export const redes = {
-    twitter: '<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>',
+    linkedin:
+        '<li li > <a ' +
+        'href="https://www.linkedin.com/company/start-web-consulting-per%C3%BA/" ' +
+        'target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>',
     facebook:
         '<li><a ' +
         'href="https://www.facebook.com/profile.php?id=100094164543754"' +
@@ -25,7 +28,7 @@ export const assets = {
     close: '</ul>',
 }
 export const redesGroup = `
-    ${redes.twitter}
+    ${redes.linkedin}
     ${redes.facebook}
     ${redes.instagram}
     ${redes.whatsApp} `;
